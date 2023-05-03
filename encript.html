@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador</title>
+</head>
+
+<body>
+    <!-- html para la pagina  -->
+    <img class="logo" src="/img/Logo@2x.png" alt="logo alura">
+    <div class="first">
+        <textarea name="encript" id="enc" cols="42" rows="15"  style="resize: none;" required placeholder="Ingrese el texto aqui"></textarea>
+        <div class="box">
+            <p class="adv"> <img class="imga" src="/img/bi_exclamation-circle-fill-1.png">  Solo letras minúsculas y sin acentos</p>
+            <input class="en" id="enb"  type="submit" value="Encriptar">
+            <input class="de" id="deb" type="submit" value="Desencriptar">
+        </div>
+    </div>
+
+    <div class="second">
+        <img class="toy" id="jug" src="/img/Muñeco.png" alt="muneco alura">
+        <p class="no" id="non" >Ningún mensaje fue <br>encontrado</p>
+        <textarea name="desencript" id="des" cols="40" rows="11"  style="resize: none;" required placeholder="Ingresa el texto que desees encriptar o desencriptar."></textarea>
+        <input class="copy" id="copy" type="submit" value="Copiar">
+    </div>
+
+</body>
+
+<script>
+    // script para desaparecer imagen y expandir cuadro con el boton de encriptar (temporalmente)
+    let bot = document.getElementById("enb");
+    let bon = document.getElementById("deb");
+    let boc = document.getElementById("copy");
+    let tex = document.getElementById("des")
+    let tes = document.getElementById("enc")
+    //para copiar
+    let Img = document.getElementById("jug");
+    let pa = document.getElementById("non")
+    let cop = document.getElementById("copy")
+
+    let vocales = ["a","i","u","e","o"];
+    let abc = ["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z"," ","  ",".",",","-","!","?","@","a","i","u","e","o"];
+    let pt = "";
+    let tp = "";
+    let ps = "";
+    let pal = "";
+
+// funcion de encriptacion
+    bot.addEventListener("click", miFuncion);
+
+    function miFuncion() {
+        pal=""
+        // verifica si la funcion esta vacia y verifica cual de los 2 textarea contiene texto para pasar el dato a p
+        let p ;
+                if (tex.value.trim() !== '') {
+                    p = tex.value;
+                } else if (tes.value.trim() !== '') {
+                    p = tes.value;
+                } else {
+                    Img.style.display = "block";
+                    pa.style.display = "block"
+                    tex.style.top = "" 
+                    tex.style.height = "" 
+                    tex.style.fontSize = "" 
+                    cop.style.display = ""
+                    return ;
+                }
+        if (p==pt){
+            return pt
+        }
+        //inicia la funcion de encriptar
+        for (let i = 0; i < p.length; i++){
+        if(p[i]==vocales[0]){
+            pt += "ai";
+        }
+        else if(p[i]==vocales[1]){
+            pt += "imes";
+        }
+        else if(p[i]==vocales[2]){
+            pt += "ufat";
+        }
+        else if(p[i]==vocales[3]){
+            pt +=  "enter";
+        }
+        else if(p[i]==vocales[4]){
+            pt += "ober";
+        }
+        else{
+            pt += p[i]
+        }
+        }
+        tes.value = pt;  
+        tex.value = pt;
+        //desaparecer y agrandar
+        Img.style.display = "none";
+        pa.style.display ="none"
+        tex.style.top = "10%"
+        tex.style.height = "70%";
+        tex.style.fontSize = "25px"
+        cop.style.display = "inline-block";
+    }
+//funcion de desencriptacion 
+    bon.addEventListener("click", miFuncion2);
+
+    function miFuncion2() {
+        pt=""
+        // verifica si la funcion esta vacia y verifica cual de los 2 textarea contiene texto para pasar el dato a tp
+        let tp;
+        if (tex.value.trim() !== '') {
+            tp = tex.value;
+        } else if (tes.value.trim() !== '') {
+            tp = tes.value;
+        } else {
+            Img.style.display = "block";
+            pa.style.display = "block"
+            tex.style.top = "" 
+            tex.style.height = "" 
+            tex.style.fontSize = "" 
+            cop.style.display = ""
+            return;
+        }
+        //inicia la funcion de desencriptar
+        pal = ""
+        for(let x = 0; x<tp.length;x++){
+                ps += tp[x]
+                if((ps=="a")&&(tp[x+1]=="i")){
+                    ps=""
+                    x=x+1
+                    pal += "a"
+                }
+                if ((ps=="u")&&(tp[x+1] === "f" && tp[x+2] === "a" && tp[x+3] === "t")){
+                    ps=""
+                    x=x+3
+                    pal+="u"
+                }
+                if ((ps=="i")&&(tp[x+1] === "m" && tp[x+2] === "e" && tp[x+3] === "s")){
+                    ps=""
+                    x=x+3
+                    pal+="i"
+                }
+                if ((ps=="o")&&(tp[x+1] === "b" && tp[x+2] === "e" && tp[x+3] === "r")){
+                    ps=""
+                    x=x+3
+                    pal+="o"
+                }
+                if ((ps=="e")&&(tp[x+1] === "n" && tp[x+2] === "t" && tp[x+3] === "e"&& tp[x+4] === "r")){
+                    ps=""
+                    x=x+4
+                    pal+="e"
+                }
+                else{
+                    for(let y = 0; y < abc.length; y++){
+                        if(ps == abc[y]){
+                            pal += abc[y]
+                            ps=""
+                        }
+                    }
+                }
+            }
+        tex.value = pal;
+        tes.value = pal;
+        // desaparecer y agrandar 
+        Img.style.display = "none";
+        pa.style.display ="none"
+        tex.style.top = "10%"
+        tex.style.height = "70%";
+        tex.style.fontSize = "25px"
+        cop.style.display = "inline-block";
+        return false;
+    }
+    //copiar
+     boc.addEventListener('click', () => {
+        tex.select();
+        document.execCommand('copy');
+    });
+
+</script>
+
+</html>
