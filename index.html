@@ -57,9 +57,10 @@
         // verifica si la funcion esta vacia y verifica cual de los 2 textarea contiene texto para pasar el dato a p
         let p ;
                 if (tes.value.trim() !== '') {
-                    tp = tes.value;
+                    p = tes.value;
+                } else if (tes.value.trim() !== '') {
+                    p = tes.value;
                 }else {
-                    tex.value = ""
                     Img.style.display = "block";
                     pa.style.display = "block"
                     tex.style.top = "" 
@@ -114,7 +115,6 @@
         } else if (tes.value.trim() !== '') {
             tp = tes.value;
         } else {
-            tex.value = ""
             Img.style.display = "block";
             pa.style.display = "block"
             tex.style.top = "" 
