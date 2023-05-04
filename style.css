@@ -58,7 +58,7 @@ textarea:focus {
     border-radius: 20px;
     font-family: "Gill Sans", sans-serif;
     color: #f3f5fc;
-    width: 300px; height: 60px;
+    width: 40%; height: 60px;
     position: relative;
     top: 12%; left: 2%;
 }
@@ -67,7 +67,7 @@ textarea:focus {
     border: solid #103c74 1px;
     border-radius: 20px;
     font-family: "Gill Sans", sans-serif;
-    width: 300px; height: 60px;
+    width: 40%; height: 60px;
     position: relative;
     top: 12%; left: 4%;
 }
@@ -123,7 +123,7 @@ textarea:focus {
     transform: scale(1.1);
 }
 /* inicia ajuste para dispositivos */
-@media (max-width:700px){
+@media (max-width:800px){
     .logo{
         width: 25%;
     }
@@ -196,7 +196,7 @@ textarea:focus {
         border: solid #103c74 1px;
     }
 }
-@media ((min-width:701px) and (max-width:1019px)){
+@media ((min-width:801px) and (max-width:1019px)){
     .logo{
         width: 25%;
     }
