@@ -150,6 +150,7 @@ textarea:focus {
         left: -30px ; top: 10px;
     }
     .de{
+        color: #173359;
         width: 115%;
         left: -31px; top: 20px;
         background-color: #f3f5fc;
@@ -222,6 +223,7 @@ textarea:focus {
         left: 50px ; top: 15px;
     }
     .de{
+        color: #173359;
         width: 40%;
         left: 75px; top: 15px;
         background-color: #f3f5fc;
