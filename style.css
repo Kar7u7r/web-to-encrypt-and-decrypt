@@ -253,6 +253,7 @@ textarea:focus {
         display: none;
     }
     #des{
+        text-align: center;
         margin-top:15px;
         color: #173359;
         height: 25%;
