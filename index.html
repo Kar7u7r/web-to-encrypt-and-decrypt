@@ -56,11 +56,10 @@
         pal=""
         // verifica si la funcion esta vacia y verifica cual de los 2 textarea contiene texto para pasar el dato a p
         let p ;
-                if (tex.value.trim() !== '') {
-                    p = tes.value;
-                } else if (tes.value.trim() !== '') {
+                if (tes.value.trim() !== '') {
                     p = tes.value;
                 } else {
+                    tex.value = ""
                     Img.style.display = "block";
                     pa.style.display = "block"
                     tex.style.top = "" 
@@ -93,8 +92,8 @@
             pt += p[i]
         }
         }
-        tes.value = pt;  
-        tex.value = pt;
+        tes.value = pt;
+        tex.value = tes.value;
         //desaparecer y agrandar
         Img.style.display = "none";
         pa.style.display ="none"
@@ -110,11 +109,10 @@
         pt=""
         // verifica si la funcion esta vacia y verifica cual de los 2 textarea contiene texto para pasar el dato a tp
         let tp;
-        if (tex.value.trim() !== '') {
-            tp = tes.value;
-        } else if (tes.value.trim() !== '') {
+        if (tes.value.trim() !== '') {
             tp = tes.value;
         } else {
+            tex.value = ""
             Img.style.display = "block";
             pa.style.display = "block"
             tex.style.top = "" 
@@ -161,8 +159,8 @@
                     }
                 }
             }
-        tex.value = pal;
         tes.value = pal;
+        tex.value = tes.value;
         // desaparecer y agrandar 
         Img.style.display = "none";
         pa.style.display ="none"
