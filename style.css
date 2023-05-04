@@ -100,7 +100,7 @@ textarea:focus {
     font-family: "Gill Sans", sans-serif;
     font-size: 16px;
     width: 80%;
-    height: auto;
+    height: 20%;
     position: relative;
     top: 68%; left: 10%;
     border: white;
