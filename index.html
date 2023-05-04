@@ -68,7 +68,7 @@
             tex.style.fontSize = "" 
             cop.style.display = ""
             return ;
-            }
+                }
         if (p==pt){
             return pt
         }
@@ -112,7 +112,9 @@
         let tp;
         if (tes.value.trim() !== '') {
             tp = tes.value;
-        }else {
+        } else if (tes.value.trim() !== '') {
+            tp = tes.value;
+        } else {
             Img.style.display = "block";
             pa.style.display = "block"
             tex.style.top = "" 
@@ -122,6 +124,7 @@
             return;
         }
         //inicia la funcion de desencriptar
+        pal = ""
         for(let x = 0; x<tp.length;x++){
                 ps += tp[x]
                 if((ps=="a")&&(tp[x+1]=="i")){
