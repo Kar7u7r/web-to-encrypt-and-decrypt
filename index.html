@@ -107,6 +107,7 @@
 
     function miFuncion2() {
         pt=""
+        pal = ""
         // verifica si la funcion esta vacia y verifica cual de los 2 textarea contiene texto para pasar el dato a tp
         let tp;
         if (tes.value.trim() !== "") {
@@ -122,7 +123,7 @@
             return;
         }
         //inicia la funcion de desencriptar
-        pal = ""
+        
         for(let x = 0; x<tp.length;x++){
                 ps += tp[x]
                 if((ps=="a")&&(tp[x+1]=="i")){
