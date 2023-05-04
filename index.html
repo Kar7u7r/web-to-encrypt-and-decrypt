@@ -24,7 +24,7 @@
     <div class="second">
         <img class="toy" id="jug" src="img/Muñeco.png" alt="muneco alura">
         <p class="no" id="non" >Ningún mensaje fue <br>encontrado</p>
-        <textarea name="desencript" id="des" cols="40" rows="11"  style="resize: none;" required placeholder="Ingresa el texto que desees encriptar o desencriptar."></textarea>
+        <textarea name="desencript" id="des" cols="40" rows="11" readonly="true" style="resize: none;" required placeholder="Ingresa el texto que desees encriptar o desencriptar."></textarea>
         <input class="copy" id="copy" type="submit" value="Copiar">
     </div>
 
@@ -57,7 +57,7 @@
         // verifica si la funcion esta vacia y verifica cual de los 2 textarea contiene texto para pasar el dato a p
         let p ;
                 if (tex.value.trim() !== '') {
-                    p = tex.value;
+                    p = tes.value;
                 } else if (tes.value.trim() !== '') {
                     p = tes.value;
                 } else {
@@ -111,7 +111,7 @@
         // verifica si la funcion esta vacia y verifica cual de los 2 textarea contiene texto para pasar el dato a tp
         let tp;
         if (tex.value.trim() !== '') {
-            tp = tex.value;
+            tp = tes.value;
         } else if (tes.value.trim() !== '') {
             tp = tes.value;
         } else {
