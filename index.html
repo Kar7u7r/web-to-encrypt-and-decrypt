@@ -56,19 +56,19 @@
         pal=""
         // verifica si la funcion esta vacia y verifica cual de los 2 textarea contiene texto para pasar el dato a p
         let p ;
-                if (tes.value.trim() !== '') {
-                    p = tes.value;
-                } else if (tes.value.trim() !== '') {
-                    p = tes.value;
-                }else {
-                    Img.style.display = "block";
-                    pa.style.display = "block"
-                    tex.style.top = "" 
-                    tex.style.height = "" 
-                    tex.style.fontSize = "" 
-                    cop.style.display = ""
-                    return ;
-                }
+        if (tes.value.trim() !== '') {
+            p = tes.value;
+        } else if (tes.value.trim() !== '') {
+            p = tes.value;
+        }else {
+            Img.style.display = "block";
+            pa.style.display = "block"
+            tex.style.top = "" 
+            tex.style.height = "" 
+            tex.style.fontSize = "" 
+            cop.style.display = ""
+            return ;
+            }
         if (p==pt){
             return pt
         }
@@ -112,9 +112,7 @@
         let tp;
         if (tes.value.trim() !== '') {
             tp = tes.value;
-        } else if (tes.value.trim() !== '') {
-            tp = tes.value;
-        } else {
+        }else {
             Img.style.display = "block";
             pa.style.display = "block"
             tex.style.top = "" 
@@ -124,7 +122,6 @@
             return;
         }
         //inicia la funcion de desencriptar
-        pal = ""
         for(let x = 0; x<tp.length;x++){
                 ps += tp[x]
                 if((ps=="a")&&(tp[x+1]=="i")){
