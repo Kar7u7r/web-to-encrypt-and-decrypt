@@ -1,9 +1,9 @@
     // script para desaparecer imagen y expandir cuadro con el boton de encriptar (temporalmente)
-    let bot = document.getElementById("enb");
-    let bon = document.getElementById("deb");
-    let boc = document.getElementById("copy");
-    let tex = document.getElementById("des")
-    let tes = document.getElementById("enc")
+    var bot = document.getElementById("enb");
+    var bon = document.getElementById("deb");
+    var boc = document.getElementById("copy");
+    var tex = document.getElementById("des")
+    var tes = document.getElementById("enc")
     //para copiar
     let Img = document.getElementById("jug");
     let pa = document.getElementById("non")
