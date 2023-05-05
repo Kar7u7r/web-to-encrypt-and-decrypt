@@ -22,7 +22,7 @@ textarea:focus {
 #enc{
     color: #103c74;
     background-color: #f3f5fc;
-    width: 80%; height: auto;
+    width: 80%; height:  75%;
     font-family: "Gill Sans", sans-serif;
     font-size: 32px;
     text-align: left;
