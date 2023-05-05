@@ -110,7 +110,7 @@
         // verifica si la funcion esta vacia y verifica cual de los 2 textarea contiene texto para pasar el dato a tp
         let tp;
         if (tes.value.trim() !== "") {
-            tp = tes.value;
+            tp = tex.value;
         }else{
             tex.value = ""
             Img.style.display = "block";
@@ -173,8 +173,6 @@
         tex.select();
         document.execCommand('copy');
     });
-    tes.value = pal;
-        tex.value = tes.value;
 </script>
 
 </html>
