@@ -10,7 +10,6 @@
     let cop = document.getElementById("copy")
 
     let vocales = ["a","i","u","e","o"];
-    let abc = ["b","c","d","f","g","h","j","k","l","m","n","ñ","p","q","r","s","t","v","w","x","y","z"," ","  ",".",",","-","!","?","@","a","i","u","e","o"];
     let pt = "";
     let ps = "";
     let pal = "";
@@ -23,7 +22,7 @@
         // verifica si la funcion esta vacia y verifica cual de los 2 textarea contiene texto para pasar el dato a p
         let p ;
         if (tes.value.trim() !== "") {
-            p = tes.value.toLowerCase();
+            p = tes.value
         }else {
             tex.value = ""
             Img.style.display = "block";
@@ -76,7 +75,7 @@
         // verifica  si la funcion esta vacia y verifica cual de los 2 textarea contiene texto para pasar el dato a tp
         let tp;
         if (tes.value.trim() !== "") {
-            tp = tes.value.toLowerCase();
+            tp = tes.value
         }else{
             tex.value = ""
             Img.style.display = "block";
@@ -116,12 +115,8 @@
                     pal+="e"
                 }
                 else{
-                    for(let y = 0; y < abc.length; y++){
-                        if(ps == abc[y]){
-                            pal += abc[y]
-                            ps=""
-                        }
-                    }
+                    pal += ps;
+                    ps=""
                 }
             }
         tes.value = pal;
