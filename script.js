@@ -74,10 +74,10 @@
     function miFuncion2() {
         pt="";
         pal ="";
-        // verifica si la funcion esta vacia y verifica cual de los 2 textarea contiene texto para pasar el dato a tp
+        // verifica  si la funcion esta vacia y verifica cual de los 2 textarea contiene texto para pasar el dato a tp
         let tp;
         if (tes.value.trim() !== "") {
-            tp = tes.value;
+            tp = tes.value; 
         }else{
             tex.value = ""
             Img.style.display = "block";
