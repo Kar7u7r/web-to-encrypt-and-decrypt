@@ -10,9 +10,7 @@
     let cop = document.getElementById("copy")
 
     let vocales = ["a","i","u","e","o"];
-    let abc = ["b","c","d","f","g","h","j","k","l","m","n","ñ","p","q","r","s","t","v","w","x","y","z"," ","  "
-    ,".",",","-","!","?","@","a","i","u","e","o","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
-    ,"P","Q","R","S","T","U","V","W","X","Y","Z"];
+    let abc = ["b","c","d","f","g","h","j","k","l","m","n","ñ","p","q","r","s","t","v","w","x","y","z"," ","  ",".",",","-","!","?","@","a","i","u","e","o"];
     let pt = "";
     let ps = "";
     let pal = "";
@@ -25,7 +23,7 @@
         // verifica si la funcion esta vacia y verifica cual de los 2 textarea contiene texto para pasar el dato a p
         let p ;
         if (tes.value.trim() !== "") {
-            p = tes.value;
+            p = tes.value.toLowerCase();
         }else {
             tex.value = ""
             Img.style.display = "block";
@@ -78,7 +76,7 @@
         // verifica  si la funcion esta vacia y verifica cual de los 2 textarea contiene texto para pasar el dato a tp
         let tp;
         if (tes.value.trim() !== "") {
-            tp = tes.value; 
+            tp = tes.value.toLowerCase();
         }else{
             tex.value = ""
             Img.style.display = "block";
