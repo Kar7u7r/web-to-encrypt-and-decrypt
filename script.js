@@ -10,7 +10,9 @@
     let cop = document.getElementById("copy")
 
     let vocales = ["a","i","u","e","o"];
-    let abc = [" ", "  ", ".", ",", "-", "!", "?", "@", ... "a", "i", "u", "e", "o", ... "a-z", ... "A-Z"];
+    let abc = ["b","c","d","f","g","h","j","k","l","m","n","ñ","p","q","r","s","t","v","w","x","y","z"," ","  "
+    ,".",",","-","!","?","@","a","i","u","e","o","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
+    ,"P","Q","R","S","T","U","V","W","X","Y","Z"];
     let pt = "";
     let ps = "";
     let pal = "";
