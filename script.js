@@ -24,6 +24,7 @@
         let p ;
         if (tes.value.trim() !== "") {
             p = tes.value;
+            p.toLowerCase();
         }else {
             tex.value = ""
             Img.style.display = "block";
@@ -77,6 +78,7 @@
         let tp;
         if (tes.value.trim() !== "") {
             tp = tes.value; 
+            tp.toLowerCase();
         }else{
             tex.value = ""
             Img.style.display = "block";
