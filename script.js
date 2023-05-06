@@ -76,6 +76,7 @@
         // verifica  si la funcion esta vacia y verifica cual de los 2 textarea contiene texto para pasar el dato a tp
         let tp;
         if (tes.value.trim() !== "") {
+            tes.value.tp.toLowerCase();
             tp = tes.value; 
         }else{
             tex.value = ""
